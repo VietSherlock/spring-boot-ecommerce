@@ -8,6 +8,7 @@ class SpringBootEcommerceApplicationTests {
 
 	@Test
 	void contextLoads() {
+
 	}
 
 }
