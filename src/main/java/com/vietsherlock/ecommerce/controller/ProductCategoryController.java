@@ -23,7 +23,7 @@ public class ProductCategoryController {
         this.categoryService = categoryService;
     }
 
-    @GetMapping("/")
+    @GetMapping
     public ResponseEntity<List<ProductCategoryDTO>> getCategories() {
         return new ResponseEntity<>(categoryService.readCategories(), HttpStatus.OK);
     }
@@ -33,12 +33,12 @@ public class ProductCategoryController {
         return new ResponseEntity<>(categoryService.readCategory(categoryId), HttpStatus.OK);
     }
 
-    @GetMapping
+    @GetMapping("/names")
     public ResponseEntity<ProductCategoryDTO> getCategoryByName(@RequestParam(name = "categoryName") String categoryName) {
         return new ResponseEntity<>(categoryService.readCategory(categoryName), HttpStatus.OK);
     }
 
-    @PostMapping("/")
+    @PostMapping
     public ResponseEntity<ApiResponse> createCategory(@Valid @RequestBody ProductCategoryDTO categoryDTO) {
         if (Helper.isNotNull(categoryService.readCategory(categoryDTO.getCategoryName()))) {
             return new ResponseEntity<>(new ApiResponse(false, "category already exist!"), HttpStatus.CONFLICT);
