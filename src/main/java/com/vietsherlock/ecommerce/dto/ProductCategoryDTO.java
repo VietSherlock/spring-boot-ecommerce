@@ -1,8 +1,12 @@
 package com.vietsherlock.ecommerce.dto;
 
+import javax.validation.constraints.NotNull;
+
 public class ProductCategoryDTO {
 
     private Long id;
+
+    @NotNull(message = "category name can't be null!")
     private String categoryName;
 
     public Long getId() {
