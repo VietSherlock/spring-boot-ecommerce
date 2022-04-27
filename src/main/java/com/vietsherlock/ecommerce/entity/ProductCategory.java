@@ -1,7 +1,6 @@
 package com.vietsherlock.ecommerce.entity;
 
-import lombok.EqualsAndHashCode;
-import lombok.ToString;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.Set;
