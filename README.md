@@ -1,5 +1,5 @@
 # spring-boot-ecommerce
-A spring boot ecommerce microservice.
+A spring boot ecommerce system.
 
 ## Technologies Are Used In This Project
 - ***Spring Boot Framework***
